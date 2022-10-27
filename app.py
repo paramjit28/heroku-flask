@@ -9,8 +9,6 @@ app = Flask(__name__)
 def my_form():
     return render_template('index.html')
 
-
-
 @app.route('/', methods=['POST'])
 def my_form_post():    
         global username
