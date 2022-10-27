@@ -11,7 +11,7 @@ def my_form():
 
 
 
-@app.route('/', methods=['POST','GET'])
+@app.route('/', methods=['POST'])
 def my_form_post():    
         global username
         username= request.form['username']
