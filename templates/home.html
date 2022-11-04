@@ -1,12 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body bgcolor="teal">
-<br>
-<h1 align="center">Welcome {{name}} !</h1>
-
-</body>
-</html>
+    <!doctype html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Gmail Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    
+    <body style="background-color: gray">
+      
+        <form action="/first" method="post">
+          
+      <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">My Gmail Search</a>
+          <form class="d-flex" role="search" action='/first' method="POST">
+            <input class="form-control me-2" name="text" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+          
+          {% if email_length != 0  %} 
+          <p>Total emails in search: {{email_length}}</p>
+    
+          {% elif email_length == 0  %}
+          <p> No messages matched your search. </p>
+          
+          {% endif %}
+    
+      
+        
+        
+    {% for i in b%}
+    
+    
+    <p class="text-white bg-dark">{{i}}</p>
+    {%endfor%}
+    </form>
+    </body>
+    
+    
+    </html>
